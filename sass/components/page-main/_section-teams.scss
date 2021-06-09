@@ -1,0 +1,88 @@
+/*  Наша команда */
+.teams {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: #f5f4fa;
+}
+
+.teams__contenier {
+  @extend %conteiner;
+}
+
+.teams__title {
+  @extend %section-title;
+}
+
+.teams__list {
+  @include flex;
+  @extend %list;
+  margin-left: -30px;
+}
+
+.teams__item {
+  margin-left: 30px;
+  padding-bottom: 30px;
+  background-color: $white-text-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.teams__card {
+  width: 151px;
+  height: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  margin-top: 30px;
+}
+
+.teams__name {
+  color: $titel-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.teams__profession {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Команда ссылки на соцсети */
+.teams__contact {
+  @extend %list;
+  @include flex($content: space-between);
+  width: 206px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-teams__link {
+  @include flex;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: transparent;
+  fill: $icon-color;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $white-text-color;
+  }
+}
+
+.contact-teams__icon {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+
+  @include transition(fill);
+}

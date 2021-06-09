@@ -1,0 +1,53 @@
+/* Наши преимущества */
+
+.advange {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advange__contenier {
+  @extend %conteiner;
+}
+
+// Скрытый заголовок
+.advange__title {
+  visibility: hidden;
+  font-size: 0%;
+  padding: 1;
+  margin: -1;
+}
+
+.advange__list {
+  @include flex($align: space-between);
+  @extend %list;
+  margin-left: -30px;
+}
+
+.advange__item {
+  width: 100% / 4;
+  margin-left: 30px;
+}
+
+.item-advange__title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: $titel-text-color;
+}
+
+.item-advange__text {
+  line-height: 1.7;
+}
+
+.item-advange__box {
+  @include flex();
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.item-advange__icon {
+  width: 70px;
+  height: 70px;
+}

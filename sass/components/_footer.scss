@@ -1,0 +1,155 @@
+/* Футер*/
+.footer {
+  background: #2f303a;
+}
+
+.footer__conteiner {
+  @include flex();
+  @extend %conteiner;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.foter__contacts {
+  width: 231px;
+  height: 132px;
+}
+
+.logo-footer__link {
+  display: block;
+  margin-bottom: 20px;
+  color: $white-text-color;
+  text-decoration: none;
+  font-family: Raleway, cursive;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.logo-footer__blue {
+  color: $accent-color;
+}
+
+.adress-footer__street {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: $white-text-color;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+.adress-footer__contacts {
+  display: inline-block;
+  line-height: 1.7;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.adress-footer__contacts:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+// ссылки на соцсети
+.footer__annexes {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+}
+
+.annexes-footer__titel {
+  color: $white-text-color;
+  font-weight: bold;
+  line-height: 1, 1;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.annexes-footer__list {
+  @include flex($content: space-between);
+  @extend %list;
+}
+
+.annexes-footer__item {
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.annexes-footer__link {
+  @include flex;
+  width: 44px;
+  height: 44px;
+
+  @include transition(background-color);
+}
+
+.annexes-footer__link:hover,
+.annexes-footer__link:focus {
+  background-color: $accent-color;
+}
+
+.annexes-footer__icon {
+  width: 20px;
+  height: 20px;
+  fill: $white-text-color;
+}
+
+/* Форма отправки email */
+.footer__form {
+  @include flex($align: flex-end, $content: space-between);
+  width: 570px;
+  height: 86px;
+  margin-left: auto;
+}
+
+.form-footer__text {
+  display: inline-block;
+  padding-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $white-text-color;
+}
+
+.form-footer__input {
+  padding-left: 16px;
+  font-size: 16px;
+  color: $white-text-color;
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.form-footer__button {
+  @include flex;
+  cursor: pointer;
+  min-width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  padding: 0;
+  border: 0;
+  background-color: $accent-color;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $white-text-color;
+}
+
+.form-footer__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}

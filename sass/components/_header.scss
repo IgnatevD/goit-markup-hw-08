@@ -1,0 +1,104 @@
+/* Шапка сайта нижняя линяя */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+/* Навигация сайта */
+.header__contenier {
+  @include flex($content: space-between);
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.header__nav {
+  @include flex($content: space-between);
+  align-items: center;
+}
+
+.header__list {
+  @include flex($content: space-between);
+  @extend %list;
+}
+
+.list-nav {
+  width: 294px;
+}
+
+.list-contact {
+  width: 333px;
+}
+
+.list-nav__link {
+  padding-top: 32px;
+  padding-bottom: 28px;
+
+  color: $titel-text-color;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+
+  @include transition();
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.list-nav__link--current {
+  color: $accent-color;
+  &::after {
+    content: " ";
+    position: absolute;
+    margin-top: 28px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: $accent-color;
+  }
+}
+
+.list-nav__item {
+  position: relative;
+}
+
+/* Контакты в шапке сайта */
+
+.list-contact__link {
+  @include flex($content: space-between);
+  padding-top: 32px;
+  padding-bottom: 31px;
+
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+
+  color: $praimeri-text-color;
+  fill: $praimeri-text-color;
+
+  @include transition;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}
+
+.list-contact__icon {
+  @include transition(fill);
+}
+
+.list-contact__icon--email {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.list-contact__icon--telefon {
+  width: 10px;
+  height: 14px;
+  margin-right: 10px;
+}

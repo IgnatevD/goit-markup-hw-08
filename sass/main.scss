@@ -1,0 +1,13 @@
+@import "./utils/variables";
+@import "./utils/mixin";
+@import "./utils/placeholders";
+@import "./components/_body.scss";
+@import "./components/_header.scss";
+@import "./components/_logo.scss";
+@import "./components/page-main/_section-hero.scss";
+@import "./components/page-main/_section-advanges.scss";
+@import "./components/page-main/_section-work.scss";
+@import "./components/page-main/_section-teams.scss";
+@import "./components/page-main/_section-parters.scss";
+@import "./components/_footer.scss";
+@import "./components/page-main/modal-page";

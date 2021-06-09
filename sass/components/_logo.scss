@@ -1,0 +1,16 @@
+/* логотип компнаиии */
+.header__logo {
+  margin-right: 94px;
+}
+
+.header__logo--link {
+  color: black;
+  text-decoration: none;
+  font-family: Raleway, cursive;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.header__logo--black {
+  color: $accent-color;
+}
