@@ -1,14 +1,4 @@
 /* Наши преимущества */
-
-.advange {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.advange__contenier {
-  @extend %conteiner;
-}
-
 // Скрытый заголовок
 .advange__title {
   visibility: hidden;
@@ -17,30 +7,17 @@
   margin: -1;
 }
 
+.advange {
+  padding: 60px 15px;
+}
+
 .advange__list {
-  @include flex($align: space-between);
-  @extend %list;
-  margin-left: -30px;
-}
-
-.advange__item {
-  width: 100% / 4;
-  margin-left: 30px;
-}
-
-.item-advange__title {
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  color: $titel-text-color;
-}
-
-.item-advange__text {
-  line-height: 1.7;
+  @include list;
 }
 
 .item-advange__box {
-  @include flex();
-  width: 270px;
+  @include flex;
+  width: 100%;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -50,4 +27,56 @@
 .item-advange__icon {
   width: 70px;
   height: 70px;
+}
+
+.item-advange__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: $titel-text-color;
+}
+
+.item-advange__text {
+  line-height: 1.7;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .advange {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .advange__contenier {
+    @include conteiner;
+  }
+
+  .advange__list {
+    @include flex($align: space-between);
+    margin-left: -30px;
+  }
+
+  .advange__item {
+    width: 100% / 4;
+    margin-left: 30px;
+  }
+
+  .item-advange__box {
+    @include flex();
+    width: 270px;
+    height: 120px;
+    background: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  .item-advange__icon {
+    width: 70px;
+    height: 70px;
+  }
 }

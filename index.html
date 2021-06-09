@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Домашнее задание #7</title>
+    <title>Домашнее задание 8</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
           rel="stylesheet">
@@ -42,6 +42,12 @@
                     </a>
                 </li>
             </ul>
+            <button class="header__button is-open" data-menu-open> 
+                <svg class="header-menu" width="40px" height="40px" aria-label="Переключатель меню мобильного">
+                    <use class="header__menu" href="./img/symbol-icon.svg#icon-menu"></use>
+                    <use class="header__close" href="./img/symbol-icon.svg#icon-close"></use>
+                </svg>
+            </button>
         </div>
     </header>
     <main>
@@ -139,7 +145,7 @@
                 <h2 class="teams__title">Наша команда</h2>
                 <ul class="teams__list">
                     <li class="teams__item">
-                        <img src="./img/img.jpg" alt="Игорь Демьяненко" width="270" />
+                        <img src="./img/img.jpg" alt="Игорь Демьяненко" class="teams__img"/>
                             <div class="teams__card card-teams">  
                                 <h3 class="teams__name">Игорь Демьяненко</h3>
                                 <p class="teams__profession">Product Designer</p>
@@ -179,7 +185,7 @@
                             </ul>
                     </li>
                     <li class="teams__item">
-                        <img src="./img/img-2.jpg" alt="Ольга Репина" width="270" />
+                        <img src="./img/img-2.jpg" alt="Ольга Репина" class="teams__img" />
                         <div class="teams__card card-teams">
                             <h3 class="teams__name">Ольга Репина</h3>
                             <p class="teams__profession">Frontend Developer</p>
@@ -219,7 +225,7 @@
                         </ul>
                     </li>
                     <li class="teams__item">
-                        <img src="./img/img-3.jpg" alt="Николай Тарасов" width="270" />
+                        <img src="./img/img-3.jpg" alt="Николай Тарасов" class="teams__img" />
                         <div class="teams__card card-teams">
                             <h3 class="teams__name">Николай Тарасов</h3>
                             <p class="teams__profession">Marketing</p>
@@ -259,7 +265,7 @@
                         </ul>
                     </li>
                     <li class="teams__item">
-                        <img src="./img/img-4.jpg" alt="Михаил Ермаков" width="270" />
+                        <img src="./img/img-4.jpg" alt="Михаил Ермаков" class="teams__img"/>
                         <div class="teams__card card-teams">
                             <h3 class="teams__name">Михаил Ермаков</h3>
                             <p class="teams__profession">UI Designer</p>
@@ -420,8 +426,8 @@
                 <a href="./index.html" class="logo-footer__link"> <span class="logo-footer__blue">Web</span>Studio</a> 
                 <address class="footer__adress adress-footer">
                     <p class="adress-footer__street">г. Киев, пр-т Леси Украинки, 26</p> <br>
-                    <a href="tel:+380961111111" class="adress-footer__contacts">+38 096 111 11 11</a> <br>
                     <a href="mailto:info@devstudio.com" class="adress-footer__contacts">info@devstudio.com</a>
+                    <a href="tel:+380961111111" class="adress-footer__contacts">+38 096 111 11 11</a> <br>
                 </address>
             </div>
     
@@ -479,6 +485,7 @@
     </footer>
     
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

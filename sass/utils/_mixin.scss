@@ -9,3 +9,25 @@
   align-items: $align;
   justify-content: $content;
 }
+@mixin list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin section-title {
+  margin-bottom: 50px;
+  color: $titel-text-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}

@@ -1,31 +1,36 @@
 /*  Наша команда */
 .teams {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 15px;
   background-color: #f5f4fa;
 }
 
-.teams__contenier {
-  @extend %conteiner;
-}
-
 .teams__title {
-  @extend %section-title;
+  @include section-title;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.17;
 }
 
 .teams__list {
-  @include flex;
-  @extend %list;
-  margin-left: -30px;
+  @include list;
 }
 
 .teams__item {
-  margin-left: 30px;
-  padding-bottom: 30px;
+  max-width: 460px;
+  max-height: 662px;
   background-color: $white-text-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-top: 30px;
+  padding-bottom: 24px;
+}
+
+.teams__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-size: contain;
 }
 
 .teams__card {
@@ -51,9 +56,9 @@
   text-align: center;
 }
 
-/* Команда ссылки на соцсети */
 .teams__contact {
-  @extend %list;
+  display: block;
+  @include list;
   @include flex($content: space-between);
   width: 206px;
   height: 44px;
@@ -78,11 +83,36 @@
     fill: $white-text-color;
   }
 }
-
 .contact-teams__icon {
   width: 44px;
   height: 44px;
   padding: 12px;
 
   @include transition(fill);
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+  .teams {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .teams__contenier {
+    @include conteiner;
+  }
+  .teams__title {
+    @include section-title;
+  }
+  .teams__list {
+    @include flex;
+    margin-left: -30px;
+  }
+  .teams__item {
+    margin-left: 30px;
+    padding-bottom: 30px;
+  }
 }
