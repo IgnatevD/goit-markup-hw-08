@@ -1,13 +1,13 @@
 /* Шапка сайта нижняя линяя */
 .header {
   border-bottom: 1px solid #ececec;
-  padding: 10px 15px;
 }
 
 .header__contenier {
+  @include flex($content: space-between);
   width: 100%;
   height: 60px;
-  @include flex($content: space-between);
+  padding: 10px 15px;
 }
 
 .header__list {
@@ -30,10 +30,9 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .header__contenier {
-    @include conteiner($width: 480px);
-    padding: 0px;
+    @include conteiner(480px);
   }
 }
 
@@ -42,7 +41,7 @@
     @include flex($content: space-between);
     @include conteiner($width: 768px);
     height: 80px;
-    padding: 21px 15px;
+    padding: 20px 15px;
   }
 
   .header__nav {

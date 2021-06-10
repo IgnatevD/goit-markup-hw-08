@@ -1,11 +1,14 @@
 /* Страница портфолио сайта */
 
 .portfolio__section {
-  padding: 60px 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .portfolio__contenier {
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Скрытый заголовок */
@@ -37,7 +40,9 @@
 
 .product__item {
   overflow: hidden;
-  margin-bottom: 30px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .product__name {
@@ -93,7 +98,7 @@
   color: $white-text-color;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .portfolio__contenier {
     @include conteiner($width: 480px);
   }
@@ -105,9 +110,23 @@
   }
   .portfolio__list {
     @include flex;
-    margin-bottom: 30px;
+  }
+  .product__list {
+    @include flex($align: stretch, $content: space-between);
+    flex-wrap: wrap;
+  }
+  .product__name {
+    height: 100%;
+  }
+
+  .product__item {
+    width: calc(100% / 2 - 15px);
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
+
 @media screen and (min-width: 1200px) {
   .portfolio__section {
     padding-top: 94px;

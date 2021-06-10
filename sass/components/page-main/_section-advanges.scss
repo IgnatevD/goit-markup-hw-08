@@ -9,21 +9,25 @@
 }
 
 .advange {
-  padding: 60px 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .advange__contenier {
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .advange__list {
   @include list;
 }
+
 .advange__item {
-  width: 450px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .item-advange__box {
@@ -52,30 +56,35 @@
   width: 100%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .advange__contenier {
     @include conteiner($width: 480px);
-    padding: 0px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .advange__contenier {
     @include conteiner($width: 768px);
-    padding: 0px;
   }
 
   .advange__list {
     @include flex($content: space-between);
     flex-wrap: wrap;
-    margin-left: -30px;
   }
 
   .advange__item {
-    max-width: 354px;
+    width: calc(100% / 2 - 15px);
     height: 251px;
-    margin-left: 30px;
     margin-bottom: 30px;
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+      max-height: 226px;
+    }
+  }
+
+  .item-advange__title {
+    text-align: left;
   }
 }
 
@@ -89,14 +98,14 @@
   }
 
   .advange__list {
-    @include flex($align: space-between);
-    margin-left: -30px;
+    @include flex($content: space-between, $align: flex-start);
   }
 
   .advange__item {
-    width: calc(100% / 4 - 30px);
-    margin-left: 30px;
-    margin-bottom: 0px;
+    width: calc((100% - 90px) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   .item-advange__box {

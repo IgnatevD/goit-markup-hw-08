@@ -1,8 +1,12 @@
 /* Постоянные клиенты */
-
+.partner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .partner__conteiner {
   width: 100%;
-  padding: 60px 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .partner__title {
@@ -17,6 +21,7 @@
   @include list;
   flex-wrap: wrap;
   margin-left: -30px;
+  margin-bottom: -30px;
 }
 
 .partner__item {
@@ -29,8 +34,8 @@
   @include flex;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  max-width: 210px;
-  max-height: 92px;
+  width: 210px;
+  height: 92px;
   padding: 16px 52px;
   fill: $icon-color;
 
@@ -50,18 +55,22 @@
   @include transition(fill);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .partner__conteiner {
     @include conteiner($width: 480px);
   }
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .partner__conteiner {
     @include conteiner($width: 768px);
   }
   .partner__list {
     @include flex($content: space-between);
+  }
+
+  .partner__link {
+    width: 226px;
   }
 }
 
