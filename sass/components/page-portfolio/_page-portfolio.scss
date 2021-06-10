@@ -1,48 +1,39 @@
 /* Страница портфолио сайта */
-.portfolio__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
-.portfolio__contenier {
-  @extend %conteiner;
+.portfolio__section {
+  padding: 60px 15px;
 }
 
 /* Скрытый заголовок */
 .portfolio__title {
   visibility: hidden;
-  font-size: 0%;
+  font-size: 1;
   padding: 0;
-  margin: 0;
+  margin: -1;
 }
-
 .portfolio__list {
-  @include flex;
-  @extend %list;
-  margin-bottom: 50px;
+  @include flex($content: flex-start);
+  @include list;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .portfolio__item {
-  margin-right: 8px;
+  margin-bottom: 15px;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .product__list {
-  @include flex($content: space-between);
+  @include flex($content: space-around);
   flex-wrap: wrap;
-  @extend %list;
+  @include list;
 }
 
 .product__item {
   overflow: hidden;
-  flex-basis: calc(100% / 3 -60px);
   margin-bottom: 30px;
-
-  @include transition(box-shadow);
-
-  &:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-  }
 }
 
 .product__name {
@@ -72,8 +63,8 @@
 
 .product__conteiner {
   position: relative;
-  width: 370px;
-  height: 294px;
+  max-width: 450px;
+  max-height: 404px;
   overflow: hidden;
 }
 
@@ -96,4 +87,37 @@
   font-size: 18px;
   line-height: 28px;
   color: $white-text-color;
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .portfolio__contenier {
+    @include conteiner;
+  }
+
+  .portfolio__list {
+    margin-bottom: 50px;
+  }
+  .product__item {
+    flex-basis: calc(100% / 3 - 60px);
+
+    @include transition(box-shadow);
+
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+  .product__conteiner {
+    width: 370px;
+    height: 294px;
+  }
 }

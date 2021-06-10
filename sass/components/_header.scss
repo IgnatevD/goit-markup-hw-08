@@ -5,8 +5,7 @@
 
 .header__contenier {
   @include flex($content: space-between);
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 15px;
   margin: auto;
 }
 
@@ -21,6 +20,7 @@
       display: block;
     }
   }
+
   &.header__menu {
     display: block;
     &.is-open {
@@ -36,17 +36,18 @@
 }
 
 @media screen and (min-width: 768px) {
-  .header__contenier {
-    width: 768px;
-  }
   .header__nav {
-    @include flex($content: space-between);
-  }
-  .header__list {
     @include flex($content: space-between);
     @include list;
   }
+
+  .header__list {
+    display: inline-block;
+    @include list;
+  }
+
   .list-nav {
+    @include flex($content: space-between);
     width: 294px;
   }
 
@@ -92,8 +93,6 @@
 
   .list-contact__link {
     @include flex($content: space-between);
-    padding-top: 32px;
-    padding-bottom: 31px;
 
     text-decoration: none;
     font-weight: 500;
@@ -118,18 +117,33 @@
   .list-contact__icon--email {
     width: 16px;
     height: 16px;
-    margin-right: 10px;
   }
 
   .list-contact__icon--telefon {
     width: 10px;
     height: 14px;
-    margin-right: 10px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .header__contenier {
     width: 1200px;
+  }
+
+  .header__list {
+    @include flex($content: space-between);
+  }
+
+  .list-contact__link {
+    padding-top: 32px;
+    padding-bottom: 31px;
+  }
+
+  .list-contact__icon--email {
+    margin-right: 10px;
+  }
+
+  .list-contact__icon--telefon {
+    margin-right: 10px;
   }
 }
