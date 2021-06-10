@@ -73,6 +73,7 @@ img {
 /* Шапка сайта нижняя линяя */
 .header {
   border-bottom: 1px solid #ececec;
+  padding: 10px 15px;
 }
 
 .header__contenier {
@@ -87,7 +88,6 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 15px;
 }
 
 .header__list {
@@ -110,6 +110,17 @@ img {
   display: none;
 }
 
+@media screen and (max-width: 480px) {
+  .header__contenier {
+    max-width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header__contenier {
     display: -webkit-box;
@@ -121,6 +132,11 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    max-width: 768px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
     height: 80px;
     padding: 21px 15px;
   }
@@ -248,7 +264,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .header__contenier {
-    width: 1200px;
+    max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -315,10 +331,11 @@ img {
 /* Футер*/
 .footer {
   background: #2f303a;
+  padding: 60px 15px;
 }
 
 .footer__conteiner {
-  padding: 60px 15px;
+  width: 100%;
 }
 
 .logo-footer__link {
@@ -509,6 +526,16 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .footer__conteiner {
+    max-width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer__conteiner {
     display: -webkit-box;
@@ -522,11 +549,19 @@ img {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 65px 89px 60px 76px;
+    max-width: 768px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .footer {
+    padding: 60px 215px;
+  }
   .footer__conteiner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -537,7 +572,7 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 1200px;
+    max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -587,6 +622,10 @@ img {
 /* Страница портфолио сайта */
 .portfolio__section {
   padding: 60px 15px;
+}
+
+.portfolio__contenier {
+  width: 100%;
 }
 
 /* Скрытый заголовок */
@@ -704,7 +743,24 @@ img {
   color: #ffffff;
 }
 
+@media screen and (max-width: 480px) {
+  .portfolio__contenier {
+    max-width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .portfolio__contenier {
+    max-width: 768px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .portfolio__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -725,7 +781,7 @@ img {
     padding-bottom: 94px;
   }
   .portfolio__contenier {
-    width: 1200px;
+    max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;

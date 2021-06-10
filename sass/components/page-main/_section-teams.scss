@@ -4,6 +4,9 @@
   background-color: #f5f4fa;
 }
 
+.teams__contenier {
+  width: 100%;
+}
 .teams__title {
   @include section-title;
   font-weight: bold;
@@ -94,12 +97,19 @@
 }
 
 @media screen and (max-width: 480px) {
+  .teams__contenier {
+    @include conteiner($width: 480px);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .teams {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+
+  .teams__contenier {
+    @include conteiner($width: 768px);
   }
 
   .teams__list {

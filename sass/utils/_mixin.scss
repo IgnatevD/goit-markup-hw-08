@@ -15,8 +15,8 @@
   list-style: none;
 }
 
-@mixin conteiner {
-  width: 1200px;
+@mixin conteiner($width: 1200px) {
+  max-width: $width;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;

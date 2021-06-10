@@ -2,10 +2,11 @@
 
 .footer {
   background: #2f303a;
+  padding: 60px 15px;
 }
 
 .footer__conteiner {
-  padding: 60px 15px;
+  width: 100%;
 }
 
 .logo-footer__link {
@@ -173,17 +174,24 @@
 }
 
 @media screen and (max-width: 480px) {
+  .footer__conteiner {
+    @include conteiner($width: 480px);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .footer__conteiner {
     @include flex;
     flex-wrap: wrap;
-    padding: 65px 89px 60px 76px;
+    @include conteiner($width: 768px);
+    padding: 0px;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .footer {
+    padding: 60px 215px;
+  }
   .footer__conteiner {
     @include flex($content: space-between);
     @include conteiner;

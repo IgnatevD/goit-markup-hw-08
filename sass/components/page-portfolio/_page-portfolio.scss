@@ -4,6 +4,10 @@
   padding: 60px 15px;
 }
 
+.portfolio__contenier {
+  width: 100%;
+}
+
 /* Скрытый заголовок */
 .portfolio__title {
   visibility: hidden;
@@ -90,9 +94,15 @@
 }
 
 @media screen and (max-width: 480px) {
+  .portfolio__contenier {
+    @include conteiner($width: 480px);
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .portfolio__contenier {
+    @include conteiner($width: 768px);
+  }
   .portfolio__list {
     @include flex;
     margin-bottom: 30px;
