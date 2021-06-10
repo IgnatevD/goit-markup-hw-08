@@ -14,12 +14,13 @@
   @include flex($content: space-around);
   @include list;
   flex-wrap: wrap;
+  margin-left: -30px;
 }
 
 .partner__item {
   @include flex;
-
   margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 .partner__link {
@@ -51,6 +52,9 @@
 }
 
 @media screen and (min-width: 786px) {
+  .partner__list {
+    @include flex($content: space-between);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -61,12 +65,7 @@
   .partner__conteiner {
     @include conteiner;
   }
-  .partner__item {
-    @include flex;
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
+
   .partner__link {
     width: 170px;
     padding: 16px 32px;

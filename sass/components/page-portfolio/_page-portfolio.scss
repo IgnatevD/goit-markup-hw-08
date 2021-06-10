@@ -93,6 +93,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .portfolio__list {
+    @include flex;
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .portfolio__section {
@@ -106,8 +110,9 @@
   .portfolio__list {
     margin-bottom: 50px;
   }
+
   .product__item {
-    flex-basis: calc(100% / 3 - 60px);
+    flex-basis: calc(100% / 3 - 20px);
 
     @include transition(box-shadow);
 

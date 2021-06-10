@@ -4,9 +4,10 @@
 }
 
 .header__contenier {
+  width: 100%;
+  height: 60px;
   @include flex($content: space-between);
-  padding: 15px;
-  margin: auto;
+  padding: 10px 15px;
 }
 
 .header__list {
@@ -30,35 +31,35 @@
 }
 
 @media screen and (max-width: 480px) {
-  .header__contenier {
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: 768px) {
+  .header__contenier {
+    @include flex($content: space-between);
+    height: 80px;
+    padding: 21px 15px;
+  }
+
   .header__nav {
     @include flex($content: space-between);
     @include list;
   }
 
-  .header__list {
-    display: inline-block;
-    @include list;
-  }
-
   .list-nav {
+    @include list;
     @include flex($content: space-between);
     width: 294px;
+    margin-left: 50px;
   }
 
   .list-contact {
-    width: 333px;
+    width: 140px;
+    height: 38px;
+    display: block;
+    @include list;
   }
 
   .list-nav__link {
-    padding-top: 32px;
-    padding-bottom: 28px;
-
     color: $titel-text-color;
     text-decoration: none;
     font-weight: 500;
@@ -66,7 +67,8 @@
     letter-spacing: 0.02em;
 
     @include transition();
-    &:hover {
+    &:hover,
+    &:focus {
       color: $accent-color;
     }
   }
@@ -91,10 +93,17 @@
 
   /* Контакты в шапке сайта */
 
+  .list-contact__item {
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+
   .list-contact__link {
-    @include flex($content: space-between);
+    @include flex($content: flex-start);
 
     text-decoration: none;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: 0.02em;
@@ -117,26 +126,38 @@
   .list-contact__icon--email {
     width: 16px;
     height: 16px;
+    margin-right: 8px;
   }
 
   .list-contact__icon--telefon {
     width: 10px;
     height: 14px;
+    margin-right: 8px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .header__contenier {
-    width: 1200px;
+    @include conteiner;
   }
 
   .header__list {
     @include flex($content: space-between);
+    @include list;
   }
 
+  .list-contact {
+    width: 333px;
+  }
+
+  /* Контакты в шапке сайта */
+  .list-contact__item {
+    &:last-child {
+      margin-top: 0px;
+    }
+  }
   .list-contact__link {
-    padding-top: 32px;
-    padding-bottom: 31px;
+    font-size: 14px;
   }
 
   .list-contact__icon--email {

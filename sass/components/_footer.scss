@@ -19,6 +19,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .logo-footer__blue {
   color: $accent-color;
 }
@@ -175,31 +176,52 @@
 }
 
 @media screen and (min-width: 768px) {
+  .footer__conteiner {
+    @include flex;
+    flex-wrap: wrap;
+    padding: 65px 89px 60px 76px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .footer__conteiner {
-    @include flex;
+    @include flex($content: space-between);
     @include conteiner;
   }
+
   .foter__contacts {
     width: 231px;
     height: 132px;
+    margin: 0px;
+    text-align: left;
   }
 
   .footer__annexes {
     margin-left: 70px;
+    margin-bottom: 0px;
+    text-align: left;
   }
 
   .footer__form {
-    @include flex($align: flex-end, $content: space-between);
+    @include flex($align: flex-end);
     width: 570px;
     height: 86px;
+    margin: 0px;
     margin-left: auto;
+    text-align: left;
+  }
+
+  .form-footer__text {
+    text-align: left;
+  }
+  .form-footer__label {
+    margin-bottom: 0px;
+    text-align: left;
   }
 
   .form-footer__input {
     margin-right: 12px;
-    width: 368px;
+    width: 358px;
+    margin-bottom: 0px;
   }
 }

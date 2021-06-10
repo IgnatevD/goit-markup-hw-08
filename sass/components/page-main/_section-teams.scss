@@ -23,6 +23,8 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 24px;
 }
 
@@ -99,7 +101,18 @@
     padding-top: 94px;
     padding-bottom: 94px;
   }
+
+  .teams__list {
+    @include flex;
+    flex-wrap: wrap;
+  }
+
+  .teams__item {
+    max-width: 354px;
+    max-height: 536px;
+  }
 }
+
 @media screen and (min-width: 1200px) {
   .teams__contenier {
     @include conteiner;
@@ -111,7 +124,10 @@
     @include flex;
     margin-left: -30px;
   }
+
   .teams__item {
+    max-width: 270px;
+    max-height: 428px;
     margin-left: 30px;
     padding-bottom: 30px;
   }
