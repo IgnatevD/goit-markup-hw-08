@@ -115,9 +115,6 @@
     @include flex($align: stretch, $content: space-between);
     flex-wrap: wrap;
   }
-  .product__name {
-    height: 100%;
-  }
 
   .product__item {
     width: calc(100% / 2 - 15px);
