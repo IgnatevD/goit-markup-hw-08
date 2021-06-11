@@ -30,8 +30,15 @@
   color: $accent-color;
 }
 
+.adress-footer {
+  display: inline-block;
+  width: 100%;
+  max-width: 232px;
+}
+
 .adress-footer__street {
   display: block;
+  font-size: 14px;
   margin-bottom: 8px;
   color: $white-text-color;
   line-height: 1.7;
@@ -40,6 +47,7 @@
 
 .adress-footer__contacts {
   display: block;
+  font-size: 14px;
   line-height: 1.7;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
@@ -48,7 +56,8 @@
 }
 
 .footer__annexes {
-  width: 206px;
+  width: 100%;
+  max-width: 206px;
   height: 80px;
   text-align: center;
   margin-bottom: 60px;
@@ -74,7 +83,8 @@
 // ссылки на соцсети
 
 .annexes-footer__list {
-  width: 206px;
+  width: 100%;
+  max-width: 206px;
   @include flex($content: space-between);
   @include list;
 }
@@ -188,18 +198,20 @@
   }
 
   .footer__form {
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer__conteiner {
-    @include flex($content: space-between);
+    @include flex($align: baseline, $content: space-between);
     @include conteiner;
   }
 
   .foter__contacts {
-    width: 231px;
+    width: 100%;
+    max-width: 231px;
     height: 132px;
     margin: 0px;
     text-align: left;
@@ -213,7 +225,8 @@
 
   .footer__form {
     @include flex($align: flex-end);
-    width: 570px;
+    width: 100%;
+    max-width: 570px;
     height: 86px;
     margin: 0px;
     margin-left: auto;
@@ -230,7 +243,8 @@
 
   .form-footer__input {
     margin-right: 12px;
-    width: 358px;
+    width: 100%;
+    max-width: 358px;
     margin-bottom: 0px;
   }
 }
