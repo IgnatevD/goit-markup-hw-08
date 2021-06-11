@@ -345,76 +345,95 @@ img {
   .menu-button.is-open .menu-button__open {
     display: none;
   }
-  .header-mobail.is-open {
-    position: relative;
-    width: 100%;
-    height: 800px;
-    border-color: #ffffff;
-    display: block;
-    text-align: left;
-    padding: 48px 83px 48px 40px;
-    margin-left: 0;
-    max-width: 0;
-  }
-  .header-mobail.is-open .menu-button {
-    position: fixed;
-    top: 0;
-    margin-top: 20px;
-    margin-right: 20px;
-  }
-  .header-mobail.is-open .header__logo {
+  .menu-conteiner {
     display: none;
   }
-  .header-mobail.is-open .header__nav {
+  .menu-conteiner.is-open {
+    position: absolute;
     display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 767px;
+    height: 100%;
+    margin-top: 60px;
+    background-color: #ffffff;
+    padding: 48px 83px 48px 40px;
+  }
+  .header-mobail__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .menu-nav {
     margin-bottom: 302px;
   }
-  .header-mobail.is-open .list-nav__item {
-    color: #757575;
+  .menu-nav__item {
     margin-bottom: 32px;
   }
-  .header-mobail.is-open .list-nav__link {
-    display: block;
-    width: 300px;
+  .menu-nav__link {
     text-decoration: none;
     color: #212121;
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
-    line-height: 1.1;
+    line-height: 47px;
+    text-align: left;
     letter-spacing: 0.02em;
   }
-  .header-mobail.is-open .list-nav__link:hover {
+  .menu-nav__link--current {
     color: #2196f3;
   }
-  .header-mobail.is-open .header__list {
-    display: block;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  .header-mobail.is-open .list-contact__item {
+  .menu-contact__item:not(:last-child) {
     margin-bottom: 32px;
   }
-  .header-mobail.is-open .list-contact__link--tel {
+  .menu-contact__link--tel {
+    color: #2196f3;
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
     font-size: 34px;
     line-height: 40px;
     letter-spacing: 0.02em;
-    color: #2196f3;
   }
-  .header-mobail.is-open .list-contact__link--email {
-    text-decoration: none;
+  .menu-contact__link--email {
     color: #757575;
+    text-decoration: none;
+    font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.02em;
   }
-  .header-mobail.is-open .list-contact__icon {
-    display: none;
+  .menu-contact {
+    margin-bottom: 64px;
+  }
+  .menu-network {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .menu-network__link {
+    text-decoration: none;
+    color: #2196f3;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+  }
+  .menu-network__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .menu-network__item::before {
+    content: "";
+    background-image: url(../../img/Line.svg);
   }
 }
 
@@ -423,7 +442,7 @@ img {
     display: none;
   }
   .menu-conteiner {
-    background-color: transparent;
+    display: none;
   }
 }
 
@@ -658,8 +677,10 @@ img {
 }
 
 /* Чем мы занимаемся */
-.work {
-  display: none;
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1408,8 +1429,9 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  max-width: 450px;
+  max-height: 609px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1449,8 +1471,9 @@ img {
 }
 
 .modal-form__conteiner {
-  width: 370px;
-  height: 529px;
+  width: 100%;
+  max-width: 370px;
+  max-height: 529px;
 }
 
 .modal-form__titel {
@@ -1523,7 +1546,7 @@ img {
 
 .modal-form__input--textarea {
   width: 100%;
-  height: 120px;
+  max-height: 120px;
   padding: 12px;
   resize: inherit;
   -webkit-box-sizing: border-box;
@@ -1594,7 +1617,8 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 425px;
+  width: 100%;
+  max-width: 425px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 17px;
@@ -1641,6 +1665,8 @@ img {
 
 .form-accept__checkbox {
   display: inline-block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
