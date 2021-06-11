@@ -327,6 +327,106 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .menu-button {
+    right: 0;
+    display: inline-block;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+  }
+  .menu-button__close {
+    display: none;
+  }
+  .menu-button.is-open .menu-button__close {
+    display: block;
+  }
+  .menu-button.is-open .menu-button__open {
+    display: none;
+  }
+  .header-mobail.is-open {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    border-color: #ffffff;
+    display: block;
+    text-align: left;
+    padding: 48px 83px 48px 40px;
+    margin-left: 0;
+    max-width: 0;
+  }
+  .header-mobail.is-open .menu-button {
+    position: fixed;
+    top: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .header-mobail.is-open .header__logo {
+    display: none;
+  }
+  .header-mobail.is-open .header__nav {
+    display: block;
+    margin-bottom: 302px;
+  }
+  .header-mobail.is-open .list-nav__item {
+    color: #757575;
+    margin-bottom: 32px;
+  }
+  .header-mobail.is-open .list-nav__link {
+    display: block;
+    width: 300px;
+    text-decoration: none;
+    color: #212121;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+  .header-mobail.is-open .list-nav__link:hover {
+    color: #2196f3;
+  }
+  .header-mobail.is-open .header__list {
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .header-mobail.is-open .list-contact__item {
+    margin-bottom: 32px;
+  }
+  .header-mobail.is-open .list-contact__link--tel {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+  .header-mobail.is-open .list-contact__link--email {
+    text-decoration: none;
+    color: #757575;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+  }
+  .header-mobail.is-open .list-contact__icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+  .menu-conteiner {
+    background-color: transparent;
+  }
+}
+
 /* Герой */
 .hero {
   text-align: center;

@@ -15,39 +15,41 @@
 <body>
     <!-- Шапка сайта -->
     <header class="header">
-        <div class="header__contenier">
-            <nav class="header__nav">
-                <a href="./index.html" class="header__logo header__logo--link">Web<span class="header__logo header__logo--black">Studio</span></a>
-                <ul class="header__list list-nav">
-                    <li class="list-nav__item list-nav__item--current"><a href="./index.html" class="list-nav__link list-nav__link--current">Студия</a></li>
-                    <li class="list-nav__item"><a href="./portfolio.html" class="list-nav__link">Портфолио</a></li>
-                    <li class="list-nav__item"><a href="#" class="list-nav__link">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="header__list  list-contact">
-                <li class="list-contact__item">
-                    <a href="mailto:info@devstudio.com" class="list-contact__link">
-                            <svg class="list-contact__icon list-contact__icon--email">
-                                <use href="./img/symbol-icon.svg#icon-email"> </use>
+        <div class="header__contenier header-mobail" id="menu-conteiner" data-menu>
+                <nav class="header__nav">
+                    <a href="./index.html" class="header__logo header__logo--link">Web<span class="header__logo header__logo--black">Studio</span></a>
+                    <ul class="header__list list-nav">
+                        <li class="list-nav__item list-nav__item--current"><a href="./index.html" class="list-nav__link list-nav__link--current">Студия</a></li>
+                        <li class="list-nav__item"><a href="./portfolio.html" class="list-nav__link">Портфолио</a></li>
+                        <li class="list-nav__item"><a href="#" class="list-nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <ul class="header__list  list-contact">
+                    <li class="list-contact__item">
+                        <a href="mailto:info@devstudio.com" class="list-contact__link list-contact__link--email">
+                                <svg class="list-contact__icon list-contact__icon--email">
+                                    <use href="./img/symbol-icon.svg#icon-email"> </use>
+                                </svg>
+                                info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="list-contact__item">
+                        <a href="tel:+380961111111" class="list-contact__link list-contact__link--tel">
+                            <svg class="list-contact__icon list-contact__icon--telefon">
+                                <use href="./img/symbol-icon.svg#icon-telefon"> </use>
                             </svg>
-                            info@devstudio.com
-                    </a>
-                </li>
-                <li class="list-contact__item">
-                    <a href="tel:+380961111111" class="list-contact__link">
-                        <svg class="list-contact__icon list-contact__icon--telefon">
-                            <use href="./img/symbol-icon.svg#icon-telefon"> </use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
-            <button class="header__button is-open" data-menu-open> 
-                <svg class="header-menu" width="40px" height="40px" aria-label="Переключатель меню мобильного">
-                    <use class="header__menu" href="./img/symbol-icon.svg#icon-menu"></use>
-                    <use class="header__close" href="./img/symbol-icon.svg#icon-close"></use>
-                </svg>
-            </button>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-conteiner" data-menu-button>
+                    <svg class="menu-button__icon" width="40px" height="40px" aria-label="Переключатель меню мобильного">
+                        <use class="menu-button__open" href="./img/symbol-icon.svg#icon-menu"></use>
+                        <use class="menu-button__close" href="./img/symbol-icon.svg#icon-close"></use>
+                    </svg>
+                </button> 
+                
+                
         </div>
     </header>
     <main>
@@ -414,11 +416,14 @@
                     </form>
                     <button class="backdrop__button" data-modal-close>
                         <svg class="backdrop__close">
-                            <use href="./img/symbol-icon.svg#icon-Vector-x"> 
-                        </use>
-                    </svg></button>
+                            <use href="./img/symbol-icon.svg#icon-Vector-x"></use>
+                        </svg>
+                    </button>
                </div>
             </div>
+            
+            
+
     </main>
 
     <!-- Футер -->
@@ -486,8 +491,8 @@
         </div>
     </footer>
     
-    <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
