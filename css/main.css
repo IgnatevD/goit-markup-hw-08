@@ -458,8 +458,7 @@ img {
     content: " ";
     width: 1px;
     height: 22px;
-    background-image: url(../img/line.svg);
-    fill: red;
+    background-image: url(../img/line.jpg);
     margin-left: 9px;
     margin-right: 9px;
   }
