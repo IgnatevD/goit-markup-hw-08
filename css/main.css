@@ -1528,7 +1528,7 @@ img {
           transform: translate(-50%, -50%);
   width: 96vw;
   max-width: 450px;
-  height: 96vh;
+  height: 100%;
   max-height: 609px;
   overflow-y: auto;
   background: #ffffff;
@@ -1567,12 +1567,6 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-form__conteiner {
-  width: 100%;
-  max-width: 370px;
-  max-height: 529px;
 }
 
 .modal-form__titel {
@@ -1645,7 +1639,7 @@ img {
 
 .modal-form__input--textarea {
   width: 100%;
-  max-height: 120px;
+  height: 120px;
   padding: 12px;
   resize: inherit;
   -webkit-box-sizing: border-box;
@@ -1720,7 +1714,7 @@ img {
   max-width: 425px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 17px;
+  margin-bottom: 30px;
 }
 
 .form-accept__input {
