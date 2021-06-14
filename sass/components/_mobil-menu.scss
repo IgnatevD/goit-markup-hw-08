@@ -99,7 +99,7 @@
       margin-bottom: 44px;
     }
     & .menu-network {
-      @include flex($content: flex-start);
+      @include flex($content: flex-start, $align: baseline);
       width: 100%;
       max-width: 380px;
     }
@@ -109,7 +109,7 @@
       color: $accent-color;
       font-weight: 500;
       font-size: 18px;
-      line-height: 22px;
+      line-height: 1.22;
       letter-spacing: 0.02em;
     }
 
