@@ -337,6 +337,11 @@ img {
     background-color: white;
     z-index: 2;
   }
+  .menu-button:hover,
+  .menu-button:focus,
+  .menu-button:active {
+    fill: #2196f3;
+  }
   .menu-button__close {
     display: none;
   }
