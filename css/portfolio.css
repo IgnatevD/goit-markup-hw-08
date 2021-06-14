@@ -981,6 +981,7 @@ img {
   }
   .menu-conteiner.is-open .menu-network__item::before {
     display: inline-block;
+    vertical-align: middle;
   }
   .menu-conteiner.is-open .menu-network__item:not(:first-child)::before {
     display: inline-block;

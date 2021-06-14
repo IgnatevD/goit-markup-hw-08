@@ -115,6 +115,7 @@
 
     & .menu-network__item::before {
       display: inline-block;
+      vertical-align: middle;
     }
 
     & .menu-network__item:not(:first-child)::before {
