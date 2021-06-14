@@ -48,14 +48,14 @@
     max-width: 767px;
     height: 100%;
     background-color: $white-text-color;
-    padding: 48px 33px 48px 40px;
+    padding: 48px 43px 48px 40px;
     z-index: 1;
 
     & .header-mobail__list {
       @include list;
     }
     & .header-mobail__nav {
-      margin-bottom: 80px;
+      margin-bottom: 75px;
     }
     & .menu-nav__item {
       margin-bottom: 32px;

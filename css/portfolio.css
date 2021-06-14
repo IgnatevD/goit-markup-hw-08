@@ -910,7 +910,7 @@ img {
     max-width: 767px;
     height: 100%;
     background-color: #ffffff;
-    padding: 48px 33px 48px 40px;
+    padding: 48px 43px 48px 40px;
     z-index: 1;
   }
   .menu-conteiner.is-open .header-mobail__list {
