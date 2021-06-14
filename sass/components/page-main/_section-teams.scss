@@ -18,6 +18,7 @@
   font-weight: bold;
   font-size: 28px;
   line-height: 1.17;
+  margin-bottom: 30px;
 }
 
 .teams__list {
@@ -25,8 +26,7 @@
 }
 
 .teams__item {
-  max-width: 100%;
-  max-height: 662px;
+  width: 100%;
   background-color: $white-text-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -46,7 +46,6 @@
 
 .teams__card {
   width: 151px;
-  height: 48px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
@@ -120,7 +119,6 @@
 
   .teams__item {
     width: calc(100% / 2 - 15px);
-    height: 536px;
     margin-bottom: 30px;
     &:nth-last-child(-n + 2) {
       margin-bottom: 0px;
@@ -141,14 +139,12 @@
   }
   .teams__list {
     @include flex($content: space-between, $align: flex-start);
+    margin-left: -30px;
   }
 
   .teams__item {
     width: calc(100% / 4 - 30px);
-    height: 428px;
     padding-bottom: 30px;
-    &:not(:last-child) {
-      margin: 0px;
-    }
+    margin-left: 30px;
   }
 }

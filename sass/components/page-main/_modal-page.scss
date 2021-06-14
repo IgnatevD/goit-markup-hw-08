@@ -6,6 +6,7 @@
   bottom: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.2);
+  z-index: 3;
 }
 
 .backdrop__form {
@@ -216,12 +217,14 @@
 
 @media screen and (min-width: 1200px) {
   .backdrop__modal {
-    width: 528px;
-    height: 581px;
+    width: 100%;
+    max-width: 528px;
+    max-height: 581px;
   }
   .modal-form__conteiner {
-    width: 448px;
-    height: 501px;
+    width: 100%;
+    max-width: 448px;
+    max-height: 501px;
   }
   .form-accept__text {
     font-size: 14px;

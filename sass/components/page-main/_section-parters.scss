@@ -10,10 +10,12 @@
 }
 
 .partner__title {
+  font-size: 28px;
   display: block;
   @include section-title;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .partner__list {
@@ -81,6 +83,11 @@
   }
   .partner__conteiner {
     @include conteiner;
+  }
+
+  .partner__title {
+    font-size: 36px;
+    margin-bottom: 50px;
   }
 
   .partner__link {
