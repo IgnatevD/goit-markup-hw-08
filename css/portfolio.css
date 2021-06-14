@@ -919,7 +919,7 @@ img {
     list-style: none;
   }
   .menu-conteiner.is-open .header-mobail__nav {
-    margin-bottom: 80px;
+    margin-bottom: 75px;
   }
   .menu-conteiner.is-open .menu-nav__item {
     margin-bottom: 32px;
@@ -988,6 +988,7 @@ img {
     width: 1px;
     height: 22px;
     background-image: url(../img/line.svg);
+    fill: red;
     margin-left: 9px;
     margin-right: 9px;
   }
@@ -1007,7 +1008,7 @@ img {
 
 @media screen and (max-width: 450px) {
   .menu-conteiner.is-open {
-    padding: 48px 33px 48px 20px;
+    padding: 48px 38px 38px 20px;
   }
   .menu-conteiner.is-open .menu-contact__link--tel {
     font-size: 24px;
