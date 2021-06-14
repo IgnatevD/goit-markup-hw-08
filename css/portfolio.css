@@ -878,6 +878,11 @@ img {
   .menu-conteiner {
     display: none;
   }
+  .menu-button.is-open {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+  }
   .menu-conteiner.is-open {
     position: fixed;
     display: -webkit-box;
@@ -902,10 +907,6 @@ img {
     background-color: #ffffff;
     padding: 48px 33px 48px 40px;
     z-index: 1;
-  }
-  .menu-conteiner.is-open body {
-    overflow: hidden;
-    position: fixed;
   }
   .menu-conteiner.is-open .header-mobail__list {
     padding: 0;
